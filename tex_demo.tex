@@ -1,0 +1,132 @@
+\documentclass[dvipdfmx]{article}
+\usepackage{amsmath， amssymb， type1cm， amsfonts， latexsym， mathtools， bm， amsthm， graphics， url， pict2e， otf， mhchem， chemfig， fancyhdr， tikz}
+\usepackage[most]{tcolorbox}
+
+
+\newtcolorbox{marker}[1][]{enhanced，
+  before skip=2mm，after skip=3mm，fontupper=\gtfamily\sffamily，
+  boxrule=0．4pt，left=5mm，right=2mm，top=1mm，bottom=1mm，
+  colback=yellow!50，
+  colframe=yellow!20!black，
+  sharp corners，rounded corners=southeast，arc is angular，arc=3mm，
+  underlay={%
+    \path[fill=tcbcolback!80!black] ([yshift=3mm]interior．south east)--++(-0．4，-0．1)--++(0．1，-0．2);
+    \path[draw=tcbcolframe，shorten <=-0．05mm，shorten >=-0．05mm] ([yshift=3mm]interior．south east)--++(-0．4，-0．1)--++(0．1，-0．2);
+    \path[fill=yellow!50!black，draw=none] (interior．south west) rectangle node[white]{\Huge\bfseries !} ([xshift=4mm]interior．north west);
+    }，
+  drop fuzzy shadow，#1}
+
+
+\pagestyle{fancy}
+\lhead{化学B演習問題}
+\rhead{}
+
+\begin{document}
+\section{}
+\begin{tcolorbox}[title=問題 1]
+  %\subsection*{問題} %1
+    \ce{NaCl}結晶は立方晶であり，単位格子の一辺の長さ$5．63 \mathrm{\AA}$である．
+    \ce{NaCl}の密度(比重)を$\mathrm{g \cdot cm^{-1}}$の単位で求めなさい．
+    ただし，\ce{Na}および\ce{Cl}の原子量は，それぞれ23．0および35．5とする． 
+    $1 \mathrm{\AA}=10^{-10}\mathrm{m}$である．
+\end{tcolorbox}
+  \subsection*{解答}
+    単位結晶中に\ce{Na}，\ce{Cl}はそれぞれ4つずつあるので，
+    \begin{align*}
+       d = \frac{(23．0 + 35．5) \times 4 \mathrm{g/cm^3}}{Na \mathrm{/mol} (5．63 \times 10^{-8} \mathrm{m})^3} = 2．18 \mathrm {g \cdot cm^{3}}
+    \end{align*}
+\section{}
+  \subsection*{問題} %2
+    蛍石(ホタル石)\ce{CaF2}は立方晶であり，単位格子の一辺の長さは$0．546 \mathrm{nm}$である．\ce{CaF2}
+    の密度(比重)を$\mathrm{g \cdot cm^{-3}}$の単位で求めなさい．ただし，\ce{Ca}および\ce{F}の原子量は40．1および19．0と
+    する．
+  \subsection*{解答}
+    単位格子中に\ce{Ca2+}は４つ，\ce{F}は8つあるので，
+    \begin{align*}
+      d = \frac{(40．1 \times 4 + 19 \times 8) \mathrm{g/mol}}{Na \mathrm{/mol} \times (0．546 \times 10^{-7} \times \mathrm{cm})^3} = 3．19 \mathrm{g \cdot cm^{-3}}
+    \end{align*}
+\section{} 
+  \subsection*{問題} %3
+     (1)イオン結晶の構造を決定する基本的な要因を述べなさい．\\
+     (2)どのような場合に配位数が大きくなるか，具体的に実例をあげて述べなさい．\\
+     (3)塩化セシウムの単位格子の長さaを求めなさい．ただし，イオン半径は，\ce{Cs+}$1．69 \mathrm{\AA}$，\ce{Cl-}$1．81 \mathrm{\AA}$とする．
+  \subsection*{解答}
+     (1)陽イオンの半径/陰イオン半径に依存する．\\
+     (2)陽イオンの配位数は\ce{NaCl}型では6であるが，\ce{CaCl}8となるように，陽イオンの半径/陰イオン半径が大きくなると配位数は増える．\\
+     (3)\ce{Cs+}，\ce{Cl-}の半径をそれぞれ$r_+$，$r_-$とすれば，三平方の定理より$\sqrt{3} a = 2(r_+ + r_-)$とかけるので$a = 4．04 \mathrm{\AA}$
+\section{}
+  \subsection*{問題} %4
+    \ce{RbBr}結晶中におけるイオン間距離は$3．43 \mathrm{\AA}$である．ただし，$1 \mathrm{\AA}=10^{-10}\mathrm{m}$である．次の問いに答えなさい。\\
+    (1)\ce{Rb+}と\ce{Br-}の遮蔽定数$(\sigma)$を28．1として，それぞれのイオンの有効核電荷$(Z-\sigma)$を計算しなさい。\\
+    (2)イオン半径は，イオン間距離をそれぞれのイオンの有効核電荷で逆比例配分することにより求めることができる．それぞれのイオン半径を求めなさい．ただし，
+    \ce{Rb}と\ce{Br}の原子番号Zはそれぞれ37，35である．\\
+    (3)半径比$rc/ra$を求めなさい．（$rc$は陽イオンの半径， $ra$は陰イオンの半径である．）\\
+    (4)(3)の結果より，\ce{RbBr}結晶はどのような構造をとると予想されるかを図示しなさい．\\
+  \subsection*{解説}
+    (1)題意より，$37-28．1 = \underline{8．9}， 35 - 28．1 = \underline{6．9}$である．\\
+    (2)$3．43\mathrm{\AA}$を距離の逆比で配分すれば，\ce{Rb+}，\ce{Br-}のイオン半径はそれぞれ$\underline{1．50\mathrm{\AA}}， \underline{1．93\mathrm{\AA}}$である．\\
+    (3)半径比は有効電荷の比の逆比であるから，$r_c/r_a =0．775$\\
+    %\begin{marker}
+    (4)半径比を考えると体心立方格子である．図は下に示す．
+  
+    %insert Akira's diagram
+\section{} 
+  \subsection*{問題} %5
+    次のイオン結晶の単位格子を図示しなさい．\\
+    (1)塩化ナトリウム型結晶\\
+    (2)塩化セシウム型結晶\\
+    (3)ルチル型結晶\\
+    (4)蛍石型結晶\\
+    (5)クリストバライト型結晶\\
+    (6)閃亜鉛鉱型結晶
+  \subsection*{解答}
+    %insert some charts
+
+\section{}
+  \subsection*{問題} %6
+    あるイオン結晶において，４個の陰イオンが互いに接触し，その隙間に陰イオンに接するように陽イオンが存在する．陰イオンの半径をR，陽イオンの半径
+    をrとすると，$r/R$の値を求めなさい．
+  \subsection*{解答}
+
+
+\section{}
+  \subsection*{問題} %7
+    金の構造は，Ｘ線回折測定によれば立方最密格子である．次の問いに答えなさい．ただし，金の原子量は197．0，アボガドロ定数Naは$\mathrm{6．022 \times 10^{23}mol^{−1}} $である。\\
+    (1)金の密度は$\mathrm {19．30 g \cdot cm^{−3} }$である．単位格子の一辺の長さ（格子定数）を求めなさい．\\
+    (2)金の結合半径（結合した状態での原子の半径）を求めなさい．
+  \subsection*{解答}
+  
+\section{}
+  \subsection*{問題} %8
+    アルミニウムはケイ素より半径が大きくかつ軽い原子である．しかし，アルミニウムの密度はケイ素よりも大きい理由を説明しなさい．
+  \subsection*{解答}
+
+\section{}
+  \subsection*{問題} %9
+    hcp（六方最密充填）とccp（立方最密充填）（以下（）内省略）において，原子の最密充填率は同じであるが，構造は異なる．これに関して説明しなさい．
+  \subsection*{解答}
+    hcpとccpは原子の積み上げ方が異なるので構造が異なる．テキストの言葉を借りると，ABC 3層使っているのがccp，AB 2層使っているのがhcpである．このような積層の違いは，閃亜鉛鉱型とウルツ鉱型でも見られるが，発展的な内容なので興味があるものは調べてみるとよい．
+
+\section{}
+  \subsection*{問題} %10
+  次の括弧に，適切な言葉や説明文または数値を記入しなさい． なお，（ア）と（イ）の解答は計算式もあわせて示しなさい．\\  
+  シリコン結晶は，図のような立方単位格子からなる．この結晶構造は，炭素原子からなる（①）の結晶構造と同じ構造である．この構造では，炭素原子は（②）混成軌道をとっているので，炭素原子の周りの配位数は（③）であり，単位格子中の原子の個数は（④）である．シリコン結晶の単
+  位格子の一辺は$ 5．4301\mathrm{\AA}$（$1 \mathrm{\AA}=10^{-10}\mathrm{m}$），シリコンの原子量は28．1であるので，シリコン結晶の密度は（ア）$\mathrm{g \cdot cm^{-3}}$，シリコンの最近接原子間距離（A=B原子間距離）は（⑤）$\mathrm{\AA}$ と計算され，シリ
+  コンの原子半径は（⑥）$\mathrm{\AA}$と求められる．ただし，B原子は立方体の体対角線方向のうち，A原子からの距離が対角線部分全体の$1/4$の場所に存在している．また，単位格子体積中にシリコン原子が占める充填率は，（イ）％となる．シリコンの比伝導度は，温度が上昇すると，（⑦）．一方、金属では逆の振る舞いを示す．この理由は，半導体では（⑧）に対し、金属では（⑨）ためである。シリ
+コンのバンド構造は、（⑩）と（⑪）から成り、電子が（⑩）から（⑪）へ励起されると、（⑩）中
+に（⑫）が生成される。（⑩）と（⑪）の間のエネルギーを持つ電子は存在せず、この帯域は（⑬）
+と呼ばれる。シリコン結晶の（⑬）の大きさは、（①）の場合と比べて（⑭）ので、半導体として振
+舞う。炭素の同素体で、層状構造を有する（⑮）は、（①）とは異なり、（⑯）の方向には電気が流
+れる。シリコンに（⑰）族の原子を添加すると p 型半導体になる。p 型半導体では、（⑩）と（⑪）
+の間に（⑱）準位が形成される。p 型と n 型の半導体を接合し、p 型を（⑲）極につなぎ、n 型はそ
+れとは逆の電極につなぐと電気が流れるが、逆につなぐと電気が流れない。これは（⑳）と呼ばれる．
+
+  \subsection*{解答}
+    1
+    ダイヤモンド （閃亜鉛鉱と答えたものがいるかもしれない．ただ，次の文に炭素原子という言葉があり， 辻褄が合うのはダイヤモンド．）
+    2 sp^3混成 
+    3 4（2の答えから自明ではあるが，正四面体に注目するとわかりやすい．）
+    4 8（$\mathrm 1 \times 4 + 1/2 \times 6 + 1/8 \times 8 $
+
+    7 与えられた熱エネルギー
+    \end{document}
